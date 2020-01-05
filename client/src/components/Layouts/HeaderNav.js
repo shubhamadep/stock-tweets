@@ -1,12 +1,11 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, InputBase, Hidden, IconButton, Drawer, List, ListItem, ListItemText, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField, Container} from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button, InputBase, Hidden, IconButton, Drawer, List, ListItem, ListItemText, Dialog} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faUserCircle, faChartLine, faNewspaper, faTools, faComments, faListAlt, faHome} from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faChartLine, faNewspaper, faTools, faComments, faListAlt, faHome} from '@fortawesome/free-solid-svg-icons'
 import { makeStyles, fade } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from 'react-router-dom';
-import Login from '../login';
 
 //Refer : https://github.com/FortAwesome/react-fontawesome
 
@@ -120,13 +119,7 @@ export default function ButtonAppBar() {
     >
       <List>
         <ListItem button component={NavLink} to='/'><ListItemText primary={'Home'} />  <FontAwesomeIcon size="lg"icon={faHome}/> </ListItem>
-        <ListItem button component={NavLink} to='/'><ListItemText primary={'Prophet Analysis'} />  <FontAwesomeIcon size="lg"icon={faChartLine}/> </ListItem>
-        <ListItem button component={NavLink} to='/News'> <ListItemText primary={'News'} /> <FontAwesomeIcon size="lg"icon={faNewspaper}/> </ListItem>
-        <ListItem button> <ListItemText primary={'Tools'} /> <FontAwesomeIcon size="lg"icon={faTools}/> </ListItem>
-        <ListItem button component={NavLink} to='/crypttalks'> <ListItemText primary={'Cryptalks'} /> <FontAwesomeIcon size="lg"icon={faComments}/> </ListItem>
-        <ListItem button component={NavLink} to='/dashboard'> <ListItemText primary={'Dashboard'} /> <FontAwesomeIcon size="lg"icon={faListAlt}/> </ListItem>
-        <ListItem button component={NavLink} to='/dashboard'> <ListItemText primary={'dada'} /> <FontAwesomeIcon size="lg"icon={faNewspaper}/> </ListItem>
-     
+        <ListItem button component={NavLink} to='/'><ListItemText primary={'Contact Us'} />  <FontAwesomeIcon size="lg"icon={faHome}/> </ListItem>   
       </List>
     </div>
   );
@@ -144,38 +137,14 @@ export default function ButtonAppBar() {
                         {sideList('left')}
                       </Drawer>
                     </Hidden>
-                    Coin Prophet
+                    Stock Tweets
                   </Typography>
                   <Hidden mdDown>
                     <Typography   className={classes.toolBarLeft} variant="h6" gutterBottom >
                       <Button component={NavLink} to='/' className={classes.button} disableRipple> Home </Button>
-                      <Button component={NavLink} to='/News' className={classes.button} disableRipple> News </Button>
-                      <Button component={NavLink} to='/' className={classes.button} disableRipple> Prophet Analysis </Button>
-                      <Button component={NavLink} to='/crypttalks' className={classes.button} disableRipple> Cryptalks </Button>
-                      <Button component={NavLink} to='/dashboard' className={classes.button} disableRipple> Dashboard </Button>
+                      <Button component={NavLink} to='/' className={classes.button} disableRipple> Contact Us </Button>
                     </Typography>                
                   </Hidden>
-                  <Hidden xsDown>
-                  <div className={classes.search}>
-                              <div className={classes.searchIcon}>
-                                <SearchIcon />
-                              </div>
-                              <InputBase
-                                placeholder="Search…"
-                                classes={{
-                                  root: classes.inputRoot,
-                                  input: classes.inputInput,
-                                }}
-                                inputProps={{ 'aria-label': 'search' }}
-                              />
-                        </div>                               
-                    <div> 
-                        <IconButton className={classes.iconButton} disableRipple onClick={handleClickOpen}><FontAwesomeIcon className={classes.margin} size="lg"icon={faUserCircle} /></IconButton>
-                    </div>
-                  </Hidden>
-                  <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                        <Login  handleCloseCallback={handleClose}/>
-                  </Dialog>
             </Toolbar>
           </AppBar>
       </div>
