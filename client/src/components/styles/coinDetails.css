@@ -1,0 +1,32 @@
+#pageLayout{
+  display: grid;
+  grid-template-columns: repeat(12, 100vh/12);
+  grid-auto-rows: minmax(60px, auto);
+  grid-gap: 5px;
+}
+
+#pageLayout div{
+  padding: 1px;
+  background: white;
+}
+
+.section-header{
+  grid-column: 1/13;
+  grid-row: 1/7;
+}
+
+.section-graphs{
+  grid-column: 1/13;
+  grid-row: 7/15;
+  width: 100%;
+}
+
+.section-news{
+  grid-column: 1/13;
+  grid-row: 3/5;
+}
+
+.section-price-grid{
+  grid-column: 1/13;
+  grid-row: 5/10;
+}

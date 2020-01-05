@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "990720d0-9a77-4319-9ad9-b138f7bfabeb",
+		"name": "APIRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DataInect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HomeGridData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/cryptinfo/home/griddata/100/2/USD",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cryptinfo",
+						"home",
+						"griddata",
+						"100",
+						"2",
+						"USD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Google  SignIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"access_token\": \"ya29.Il-RB7QPdOhvR0eNz9AirhTry5b1hicuN0jfxzzQ04ns5x4p_xE-5dBiqNbZHj3bT6iXQwTzCuQByXJivDL2yB822kiiUegUDWLYq_FFe1nLeiH7eJ8piEtGzgcOGBF0sQ\"\r\n}\t",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/oauth/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"oauth",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckAuth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Facebook  SignIn Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"access_token\": \"EAAIpZBtuaFaQBAA4PUmKP6hzu5SIl0XvAWtNWCdyIGSx1hV95QlyPspSC5xHAZBZAJx7nc64BJbZCsqEAWMxu2voME8EJN6g2mfxYBn3oZC2rSLmbMWms11cQe2wNoWEzxZAZBDfjBEbztJQzbN1wujdvDZCdvzcsipi1WTm7RAEbj1cpqpRtMcuuAoZCwGczhwYYOBQQsnaV1onY3JwxZAyZA76OJnsZCpJHLZAcYVNBc0dznQZDZD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/oauth/facebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"oauth",
+						"facebook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
